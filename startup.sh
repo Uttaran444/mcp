@@ -1,2 +1,1 @@
-pip install "fastapi[standard]"
-fastapi run main.py
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
